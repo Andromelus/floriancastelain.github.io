@@ -1,0 +1,549 @@
+/* latin-ext */
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(UI/Wu5Iuha-XnKDBvqRwQzAG_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(UI/sDGTilo5QRsfWu6Yc11AXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
+  
+  
+  HTML, BODY 
+  {	height:100%;
+      margin:0px;
+      font-family:'Ubuntu', arial, sans-serif;
+      font-size:14px;
+      cursor:default;	
+      color:#EEE;
+      user-drag: none;
+  }
+  
+  BODY
+  {	overflow-x:hidden;
+      overflow-y:scroll;	
+      background-color:#111;
+      background-size:cover; background-position:50% 50%; background-attachment:fixed;	
+      background-image:url(UI/wpx10.jpg) ;
+  }
+  
+  CANVAS { border:none; padding:0px; margin:0px; }
+  
+  DIV { box-sizing:border-box; /* 2018 /!\ */ }
+  
+  A, INPUT, TD { transition:all .25s; outline:none; }
+  
+  TABLE { border-collapse:collapse; table-layout:fixed;  }
+  TD { padding:0px; margin:0px; }
+  TD.mid { vertical-align:middle; }
+  
+  TR { vertical-align:top; }
+  P { margin:0px 0px 8px 0px; }
+  PRE { font-size:11px; word-wrap:break-word; margin:0px; white-space:pre-wrap; }
+  
+  /*		std		*/
+  
+  DIV.lay { position:fixed; top:0px; left:0px; width:100%; height:100%; z-index:20; background-color:RGBA(32,32,32,.75); }
+  TD.splasher { vertical-align:middle; }
+  DIV.splasher { margin:auto; max-width:512px; border:1px solid #444; background-color:RGBA(0,0,0,.65); }
+  
+  
+  /*	--------------------------------------------------------------	*/
+  
+  .pan { text-align:center !important; }
+  .small { font-size:12px; }	
+  .right { text-align:right; }
+  .bigger { font-size:160%; }
+  .bw { word-wrap:break-word; overflow-wrap: break-word;  word-break: break-word; }
+  
+  
+  I  { color:#FE3; font-style:normal; }
+  U { color:#CF0; text-decoration:none; font-weight:normal; text-align: center; } 
+  S { color:#F84; text-decoration:none; font-weight:normal; }
+  B { color:#FFF; font-weight:bold; font-weight:normal; }	
+  EM { color:#8AF; font-weight:normal; font-style:normal; }
+  
+  SUB { color:RGBA(200,200,200,.75); font-size:11px; font-style:normal; vertical-align:middle; /* chan */ }
+  
+  UL { padding:0px; }
+  LI { margin-left:14px; list-style-type:square }
+  
+  H3,H4,H5,H6
+  {	margin:0px;
+      font-size:13px;
+      font-weight:bold;	
+      border:1px solid RGBA(0,0,0,.2);
+      padding:5px;
+      text-transform:uppercase;	
+      text-align:center;
+      font-weight:normal ;
+  }
+  
+  /* comme buf dans grid */
+  /* TD.thk H3,H4,H5,H6 { min-height:24px;  } */
+  
+  H3 { background-color:#268; color:#DEF; }
+  H4 { background-color:#484; color:#FFD; }
+  H5 { background-color:#812; color:#FDE; }
+  H6 { background-color:#123; color:#ABC; }
+  
+  
+  H1, H2 { background-color:RGBA(0,0,0,.75); color:#FFF; font-family:verdana; font-weight:normal; margin:0px; text-align:center; padding:4px; font-size:22px; line-height:32px; min-height:32px; }
+  H2 { background-color:RGBA(0,0,0,.3); color:#DDD; font-size:18px; }
+  
+  H1, H2 { white-space:nowrap; overflow-x:hidden; text-overflow:clip; }
+  
+  
+  /*	--------------------------------------------------------------	*/
+  
+  TABLE.pao { width:100%; height:100%; }
+  
+  TR.fit { height:1px; background-color:#000; }
+  
+  DIV.head { position:fixed; top:0px; left:0px; }
+      TR.head { height:45px; }
+      TD.head { /* background-color:#000; */ border-bottom:1px solid RGBA(0,0,0,1); }
+  
+  DIV.page { height:100%; }
+      TD.page { }
+      TD.chan { background-color:RGBA(0,32,64,.5); }
+      TD.main { background-color:RGBA(0,32,64,.6); overflow-x:hidden; /* border-right:1px solid RGBA(255,255,255,.2); */  }
+      TD.side { background-color:RGBA(0,32,64,.7); overflow-x:hidden; }
+  
+  
+  
+      
+  DIV.chan { width:20%; height:100%; position:fixed; top:0px; left:0px;  }
+  TABLE.chan { width:100%; height:100%; overflow:hidden; /* background-color:RGBA(0,32,64,.5); */ color:#AAA; /* border-right:1px solid RGBA(255,255,255,.2); */ }
+      TD.chancon { height:100%; vertical-align:bottom; }
+      DIV.chanx { direction:rtl; overflow-y:scroll; max-height:100%; text-align:left;  }
+      
+  
+      
+  DIV.tail { position:fixed; left:0px; bottom:0px; }
+      TR.tail { height:45px; }	
+      TD.tail { vertical-align:middle; background-color:#000; border-top:1px solid RGBA(255,255,255,.3); }
+  
+      TD.flag { color:#FFF; text-align:center; } 	
+      
+      TR.prechan { height:30px; background-color:#000; border-top:1px solid #222; border:0px; }
+      TD.prechan { font-size:14px; overflow:hidden; border-right:1px solid #222; }	
+      DIV.prechan { height:25px; overflow:hidden; text-align:center; animation: slider 1s; padding:2px 10px 2px 10px; white-space:nowrap; }
+      
+  @keyframes slider { 0% { background-color:#444; } 100% { background-color:#000; } }
+  
+      
+  /*	---------------	*/
+  
+  DIV.tt, TD.tt
+  {	background-color:RGBA(215,220,225,.65);
+      margin:0px;
+      font-size:12px;
+      font-weight:normal;		
+      padding:0px 4px 0px 6px;
+      color:#222;
+      text-transform:uppercase;	
+      border-left:1px solid RGBA(0,0,0,.5);
+      line-height:24px;
+      box-sizing:border-box;
+      
+      /*	test, 2018
+      background-color:transparent;
+      border-bottom:4px solid #AAA;
+      color:#FFF; font-weight:bold
+      */
+  }
+  
+      
+  
+      
+  
+  /*	---------------	*/
+  
+  TABLE.menu
+  {	vertical-align:top;	
+      width:100%;
+      height:45px;
+      background-color:#000;
+  }
+  
+      TD.menu
+      {	height:100%;	
+          padding-right:4px;
+      }
+      
+      A.menuA,A.menuB,A.menuC,A.menuD
+      {	display:inline-block;		
+          height:100%;
+          width:100%;
+          padding:4px 0px 0px 4px;				
+          text-decoration:none;
+          text-transform:uppercase;
+          font-size:13px;
+          margin:0px;
+          border:0px;
+          outline:none;
+          box-sizing:border-box;
+          border-bottom:4px solid #69C;
+      }
+      
+      A.menuA,A.menuB,A.menuC { color:#AAA;  }	
+      A.menuA { color:#69C; } 
+      A.menuC { text-align:center; color:#999; }
+      
+  A.menuA:hover,A.menuB:hover, A.menuC:hover, A.menuD
+  {	background-color:#69C; color:#FFF; }
+      
+  .menuinfo
+  {	padding:0px 4px 0px 4px; font-size:12px;
+      display:inline-block; margin-left:0px; line-height:125%;
+      color:#000; background-color:#FF0; border-radius:3px; box-shadow:0px 0px 15px #FF0;
+  }
+  
+      
+  /*	-------		CHAN	--------	*/
+  
+  
+      
+  
+      
+  /*	---------------	*/
+  
+  /*	buh ex tail flag ? */
+  /*	bum	mini() */
+  /* buinfo ? */
+  
+  A.bu, A.bued, A.buf, A.bufed, A.bur, INPUT.bu, INPUT.buf, A.buh, A.buinfo, A.bua, A.bum, A.bumf
+  {	display:inline-block;
+      /* padding:4px 6px 4px 6px;  */
+      padding:0px;
+      background-color:RGBA(100,150,200,.75);
+      border:1px solid RGBA(255,255,255,.4);
+      box-shadow:0px 2px 3px RGBA(0,0,0,.5);
+      margin:2px 4px 2px 2px;
+      color:#FFF;
+      text-decoration:none;	
+      font-size:11px;
+      outline:none;
+      text-transform:uppercase;
+      cursor:pointer;
+      box-sizing:border-box;
+  }
+  
+      DIV.bu, INPUT.bu
+      {	padding:4px 4px 4px 4px; float:left; text-align:left;
+      }
+  
+      DIV.buf, INPUT.buf /* sans img */
+      {	padding:6px 3px 6px 3px; text-align:center;
+          font-size:12px;
+      }
+  
+  
+      /*	padding:6px 0px 6px 0px;  */
+      A.buf, A.bufed , A.bumf, INPUT.buf, A.buinfo { width:99%; text-align:center; min-width:32px; margin:0px 0px 1px 0px; /* forum */ }
+  
+      A.bued, A.bufed { background-color:#000; }
+      A.buh { line-height:22px; font-size:13px; }
+      A.bu:hover, A.bua:hover, A.buh:hover, A.bued:hover, A.buf:hover, INPUT.bu:hover, INPUT.buf:hover, A.buinfo:hover, A.bum:hover, A.bumf:hover
+      { background-color:#000; }	
+      
+      /* bu red */
+      A.bur:hover { background-color:#F00; }	
+      A.bur  { border:1px solid #F00; background-color:#800; color:#FF8; }
+      A.buinfo { color:#DDD; border:1px solid RGBA(255,255,255,.25); background-color:RGBA(150,150,150,.5); }
+      A.bua { background-color:RGBA(255,150,20,.5); }
+      A.bum,A.bumf { background-color:RGBA(255,255,255,.2); /* mini */ }
+  
+  /* lien chan */
+  A.lnk { text-decoration:none; border-bottom:1px solid #888; }
+  A.lnk:hover { border:0px; }	
+  
+  /* icon help */
+  A.icon { margin:0px 8px 0px 8px; text-decoration:none; font-size:16px; line-height:100%; color:#FFF; background-color:#000; padding:4px 8px 4px 8px; }
+  A.icon:hover { border:0px; background-color:RGBA(100,150,200,1); }	
+      
+  /*	--------------------------------------------------------------	*/
+  
+  TABLE.grid { width:100%; table-layout:auto; }
+  
+  TD.tk, TD.tkk, TD.tv, TD.td, TD.tg { padding:4px 6px 4px 6px; border-bottom:1px solid RGBA(0,0,0,.1); }
+      
+  TD.td  { text-align:right; /* pour TX */ }
+      
+  TD.tk, TD.tkk { text-align:right; border-right:1px solid RGBA(0,0,0,.3);border-left:1px solid RGBA(0,0,0,.6); text-transform:uppercase; font-size:11px; }
+      
+  TD.tkk  { width:33% ;  }
+  TD.thk { width:33% ; /* uniquement */ }
+      
+  TD.tv, TD.td { background-color:RGBA(255,255,255,.1); font-size:13px; }
+      
+  TD.tg { background-color:RGBA(0,0,0,.5); text-align:center; border:1px solid RGBA(0,0,0,.5); color:#EEE; }
+      
+      TD.bgimg
+      {	background-size:cover;
+          background-position:50% 50%;
+          border-right:1px solid #000;
+          border-left:1px solid #000;
+      }
+      
+  .bxs, .bx { border:1px solid RGBA(255,255,255,.5); font-size:14px; padding:4px; }
+      
+  INPUT.bx, SELECT.bx { width:100%; box-sizing:border-box; }	
+  INPUT.bxs { width:49%; box-sizing:border-box; }
+  
+  TEXTAREA.bx , TEXTAREA.bxs {  width:99%; height:150px; font-family:sans-serif; font-size:14px; box-sizing:border-box; }
+  TEXTAREA.bxs { height:75px; }
+      
+  /*	--------------------------------------------------------------	*/
+  
+  
+  DIV.bloc, DIV.help, DIV.danger, DIV.inter
+  {	/* border:1px solid RGBA(0,0,0,.25); */
+      border-top:0px;
+      border-left:0px;
+      padding:0px;	
+      background-color:RGBA(64,64,64,.5) ;
+  }
+      
+      TD.fo { word-wrap:break-word; overflow-wrap: break-word;  word-break: break-word; }
+      
+      TD.bloc { background-color:RGBA(64,64,64,.5) ; }
+      
+      /* TD.help, DIV.help 		{ background-color:RGBA(150,200,100,.5); color:#AFF !important; font-size:13px; } */
+      /* TD.help, DIV.help 		{ background-color:RGBA(150,200,100,.25); color:#DFD !important; font-size:13px; } */
+      
+      TD.help, DIV.help 		{ border-left:4px solid #8FF; background-color:RGBA(150,200,250,.25); color:#CFF !important; }	
+      TD.modo, DIV.modo 	{ border-left:4px solid #FF8; background-color:RGBA(250,200,150,.25); color:#FFC !important; }
+      
+      TD.help, DIV.help, TD.danger, DIV.danger, TD.modo, DIV.modo, TD.inter, DIV.inter { font-size:13px; }
+      
+      TD.danger, DIV.danger 	{ background-color:RGBA(128,32,64,.5); color:#FFD !important; }
+      TD.inter, DIV.inter 	{ background-color:RGBA(64,96,48,.65); color:#FFD !important; }
+      
+      TD.in, DIV.in
+      {	padding:6px;
+      }
+      
+      TD.in2, DIV.in2
+      {	padding:4px 8px 4px 0px;
+      }
+      
+      DIV.inside
+      {	width:90%;
+          margin:auto;
+      }
+      
+      DIV.full
+      {	width:100%; height:100%;
+      }
+      
+  DIV.br { width:100%; clear:both; }
+  DIV.bre { width:100%; clear:both; height:8px; /* small 2018 */ }
+      
+  /*	--------------------------------------------------------------	*/
+  
+  DIV.picintro
+  {	text-align:center; border-bottom:1px solid RGBA(255,255,255,.25);
+      box-shadow:0px 8px 16px #000; width:100%; height:201px;
+      background-size:cover; background-position:50% 50%;
+  }
+  
+  DIV.logo { background-repeat:no-repeat; background-position:50% 50%; background-size:contain; height:100%; width:100%; }
+  
+  DIV.intro
+  {	padding:20px;
+  }
+  
+  
+  TABLE.double, TABLE.multi { width:100%; vertical-align:top; }
+  TD.double { width:50%; }
+  TD.triple { width:33%; }
+  TD.quad { width:25%; }
+  
+  /*	--------------------------------------------------------------	*/
+  
+  DIV.free
+  {	font-size:18px;
+      padding:8px;
+  }
+  
+  IMG.av { width:90%; max-width:256px; border:1px solid RGBA(255,255,255,.2); box-shadow:0px 0px 8px RGBA(0,0,0,.5); }
+      
+  DIV.timer { float:left; font-size:18px; color:#FFF; padding-left:8px; }
+              
+  DIV.miniu
+  {	font-size:10px;
+      color:#FFF;
+      float:right;
+      text-align:left;
+      margin-left:3px;
+  }
+  
+  
+  DIV.solo { padding:0px; background-color:transparent; text-align:left; }
+  IMG.solo { border:1px solid RGBA(255,255,255,.25); width:35px; height:35px; }
+  DIV.solo2 { display:inline-block; vertical-align:top; padding:2px 0px 0px 4px; color:#DDD; font-size:12px; text-transform:uppercase; }
+  DIV.solo3 { font-size:13px; color:#FFF; }
+      
+      
+  
+  
+  /*	-----------------------------------------------------------------	*/
+  
+  
+  
+  A.serv { background-color:#000; display:inline-block; float:left; margin:0px 4px 0px 0px; }	
+  /* liste services, pic fade */
+  IMG.serv { width:120px; }
+  IMG.serv:hover { opacity:.4 } 
+  
+  /* station td */
+  DIV.serv { height:100%; margin:0px; border:1px solid RGBA(255,255,255,.15); border-top:0px; border-left:0px; }
+  
+  TD.serv { height:1px; background-color:RGBA(64,64,64,.5) ; overflow:hidden; text-overflow:clip; }
+  
+  DIV.inserv { float:left; }
+  
+  IMG.item
+  {	width:180px;
+      float:left;
+      margin-right:8px;
+  }
+  
+  IMG.service /* service principal, page */
+  {	width:100px; height:100px;
+      float:left;
+      margin-right:8px;
+      border:1px solid #444;
+  }
+  
+  IMG.mitem
+  {	width:96px;
+      float:left;
+      margin-right:4px; margin-bottom:4px;
+      border:1px solid #FFF;
+  }
+  
+  IMG.mini
+  {	width:24px;
+      border:1px solid #000;
+      vertical-align:middle;
+  }
+  
+  DIV.graph { background-color:RGBA(0,0,0,0); font-size:10px; padding:4px; text-transform:uppercase; }
+  TD.graph1, DIV.graph1	{ background-color:RGBA(0,0,0,.4); width:100%; border:1px solid RGBA(255,255,255,.25); height:15px; }
+  TD.graph2, DIV.graph2	{ background-color:#FFF; height:15px; box-shadow:0px 0px 8px #8AF; }	
+  TD.graph1, TD.graph2 { width:100%; height:20px; /* jobs */ }
+  
+  .hide	{ width:1px; height:1px; } /* audio, éventuellement */
+  
+  .vid169 { position:relative; background-color:#000; width:100%; padding-bottom:50%; height:0; }
+  .vid169 iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+  
+  /* ex config ---------------------------------------------- */
+  
+  
+  
+  TD.tk, TD.tkk { background-color:RGBA(200,200,200,.30); color:#FFF; }
+  TD.tv, TD.td { color:#CDE; }
+  
+  
+  .bx, .bxs { color:#FFF; background-color:RGBA(0,0,0,.5);  }
+  
+  
+  A.lnk { color:#FFF; }
+  
+  TD.ca { color:#FE8 !important; }
+  
+  /* ^^^ ex config ---------------------------------------------- */
+  
+  
+  
+  
+  /* DIV.cam { background-color:#111; margin:auto; border:0px; width:100%; padding-bottom:55%; height:0px; overflow:hidden; border-bottom:1px solid #444; } */
+  
+  
+  DIV.tuto { border:1px solid #FFF; background-color:RGBA(160,160,160,.6); /* animation:slider .3s linear; */  }
+  
+  DIV.pop { cursor:pointer; border:1px solid #000; box-shadow:0px 0px 32px #000; z-index:8; animation:slider 1s; }
+  
+  DIV.events { position:fixed; }
+  DIV.event { float:left; clear:both; cursor:pointer; animation:blinker 1s infinite; text-transform:uppercase; text-align:left; color:#FFF; border:1px solid #FA3; font-size:12px; box-shadow:0px 0px 32px #000; padding:8px; }
+  
+  @keyframes blinker { 0% { background-color:RGBA(255,160,48,1); } 100% { background-color:RGBA(128,32,64,.75); } }
+  
+  
+  DIV.fly { float:left; width:64px; }
+  
+  DIV.chanline, DIV.chanbot,DIV.chanlead { direction:ltr; border-top:1px solid RGBA(255,255,255,.07); font-size:12px; line-height:145%; padding:0px 1px 0px 5px; word-wrap:break-word;  word-break: break-word; }
+  DIV.chanbot { background-color:RGBA(150,200,250,.2); color:#FFF; }
+  DIV.chanlead { background-color:RGBA(200,0,0,.3); color:#FF8; box-shadow:0px 0px 4px #000; }
+  
+      
+  TD.chaninput { text-align:center; font-size:12px; width:20%; }
+  
+  
+  
+  DIV.flag { color:#FF0; display:inline-block; margin-left:4px; }
+      
+  DIV.debug { font-size:11px; color:#888; float:left; overflow:hidden; }
+  
+  SPAN.nnn0, SPAN.nnn1, SPAN.nnn2, SPAN.nnn3, SPAN.nnn4, SPAN.nnn5 { color:#FFF; padding:0px 0px 0px 2px; }
+  SPAN.nnn0 { border-left:4px solid #000; }
+  SPAN.nnn1 { border-left:4px solid #F40; }
+  SPAN.nnn2 { border-left:4px solid #08F; }
+  SPAN.nnn3 { border-left:4px solid #8A0; }
+  SPAN.nnn4 { border-left:4px solid #FF0; }
+  SPAN.nnn5 { border-left:4px solid #FFF; } /* B */
+  
+  /* fly, cover */
+  
+  DIV.ft , DIV.fv, DIV.fon, DIV.foff { font-size:12px; line-height:200%; text-align:center; }
+  DIV.ft, DIV.fon { color:#BDE; background-color:#567;  }
+  DIV.ft { text-transform:uppercase; border-right:1px solid #456; }
+  DIV.fon { color:#FFF; margin:1px; text-align:center; background-color:RGBA(255,255,255,.15); }
+  DIV.foff { margin:1px; text-align:center; color:#456; background-color:RGBA(0,0,0,.2); }
+  
+  
+  DIV::-webkit-scrollbar { width:10px; background-color:transparent; }
+  DIV::-webkit-scrollbar-thumb { background-color:RGBA(255,255,255,.5); outline:0px }
+  
+  
+  /*	----------- 2018 -------------- */
+  
+  TABLE.service_side { width:100%; table-layout:auto; }
+  TD.service_side { width:33%; border-right:1px solid #000; }
+  IMG.service_side { width:100%; display:block; box-sizing:border-box; }
+  IMG.service_side:hover { opacity:.4 } 
+  
+  DIV.credit { padding-right:40px; text-align:right; }
+  
+  DIV.minie /* remplace miniu */
+  {	font-size:11px; float:left; text-align:left; overflow:hidden; }
+  
+  IMG.minie
+  {	width:34px; border:1px solid #000; vertical-align:middle; float:left; }
+  
+  IMG.miniu
+  {	margin:-4px 4px -4px -5px; width:24px; border:1px solid #000; vertical-align:middle; float:left; }
+  
+  IMG.minib
+  {	width:30px; border:1px solid #000; vertical-align:middle; vertical-align:middle; float:right; }
+  
+  DIV.fl
+  {	display:inline-block; float:left; clear:none; vertical-align:middle; margin-right:4px;
+  }
+  
+  TD.audio
+  {	width:2px; 
+  }
+  
+  
